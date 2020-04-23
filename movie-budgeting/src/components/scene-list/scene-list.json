@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "icon": "icon-class-name",
+        "label": "Scene 1",
+        "to": "#Scene-1"
+    },
+    {
+        "id": 2,
+        "icon": "icon-class-name",
+        "label": "Scene 2",
+        "to": "#Scene-2"
+    },
+    {
+        "id": 3,
+        "icon": "icon-class-name",
+        "label": "Scene 3",
+        "to": "#Scene-3"
+    }
+]

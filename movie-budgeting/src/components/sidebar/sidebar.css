@@ -1,0 +1,35 @@
+#sidebar{
+	background: #000;
+	min-height: 100vh;
+	float: left;
+	width: 16%;
+	font-size: 13px;
+}
+.side-bar-links{
+	padding: 5px 15px;
+	margin: 0;
+	min-height: 20px;
+	
+}
+#sidebar .metismenu {
+	font-size: 13px;
+}
+.side-bar-links a {
+	text-decoration: none;
+	color: #eee;
+	padding-left: 15px;
+}
+.relative {
+	position: relative;
+	display: block;
+	text-indent: 58px;
+	background: #303336;
+	height: 30px;
+	color: #fff;
+}
+.sort {
+	position: absolute;
+	right: 2px;
+	top: 3px;
+
+}

@@ -1,0 +1,318 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"pa",
+				"padding-top\tproperty"
+			],
+			[
+				"ma",
+				"margin-bottom\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"tex",
+				"text-align\tproperty"
+			],
+			[
+				"margi",
+				"margin-left\tproperty"
+			],
+			[
+				"fu",
+				"fullName"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"img",
+				"image-popup"
+			],
+			[
+				"im",
+				"image-popup"
+			],
+			[
+				"imag",
+				"image-popup"
+			],
+			[
+				"Himal",
+				"Himalayas"
+			],
+			[
+				"conta",
+				"container-bottom-spacer"
+			],
+			[
+				"col-md",
+				"col-md-12"
+			],
+			[
+				"cont",
+				"container-bottom-spacer"
+			],
+			[
+				"col-",
+				"col-md-6"
+			],
+			[
+				"md",
+				"col-md-6"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Install Package Control"
+			],
+			[
+				"pci",
+				"View Package File"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/my-app/.gitignore",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/product.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/media.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/index.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/about.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/contact.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/README.md",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/index.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/src/like_button.js",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/my-app/src/App.js",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/my-app/package.json",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/my-app/node_modules/react-scripts/scripts/build.js",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/my-app/src/App.test.js",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/like_button.js",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/like_button.jsx.js",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/node_modules/babel-core/package.json",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/e2e/package.json",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/revolution/php/youtube/class-youtube.php",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/new/index.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/new/js/functions.js",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/new/css/navigation-menu.css",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/new/media.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/farm/css/navigation-menu.css",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/farm/css/shortcode.css",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/farm/css/style.css",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/farm/js/functions.js",
+		"/C/wamp64/www/farmsanctuary/index.php",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/farm/index.html",
+		"/C/wamp64/www/farmsanctuary/contact.php",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lowt/web/farm/contact.html",
+		"/C/wamp64/www/farmsanctuary/includes/header.php",
+		"/C/wamp64/www/farmsanctuary/includes/footer.php",
+		"/C/wamp64/www/farmsanctuary/events.php",
+		"/C/wamp64/www/farmsanctuary/gallery.php",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/angular/greeter.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/angular/greeter.js",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lwot/web/index.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lwot/web/farm/css/navigation-menu.css",
+		"/C/wamp64/www/farmsanctuary/css/shortcode.css",
+		"/C/wamp64/www/farmsanctuary/css/style.css",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/index.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/error.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/vietnam.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/angular/greeter.ts",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lwot/web/farm/index.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lwot/web/farm/index.php",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Iris Lwot/web/farm/includes/header.php",
+		"/C/Users/Sandeep/Downloads/stories/stories/index.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/nepal.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Projects/Farm Sanctuary/web/public_html/events.php",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/js/main.js",
+		"/C/wamp64/www/index.php",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/scss/style.scss",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/foods.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/package.json",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/contact.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/js/aos.js",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/js/popper.min.js",
+		"/C/wamp64/www/farmsanctuary/index.html",
+		"/C/wamp64/bin/apache/apache2.4.41/conf/httpd.conf",
+		"/C/wamp64/www/farmsanctuary/.htaccess",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/single.html",
+		"/C/Users/Sandeep/Downloads/stories/stories/single.html",
+		"/C/Users/Sandeep/Documents/Sandeep/React/react-tutorial/package.json",
+		"/C/Users/Sandeep/Documents/Sandeep/React/react-tutorial/public/index.html",
+		"/C/Users/Sandeep/Documents/Sandeep/Travel blog/prepros-6.config"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 299.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
