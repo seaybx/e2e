@@ -5,7 +5,7 @@ import api from '../api';
 class UpdateScene extends React.Component {
 	constructor(props){
 		super(props);
-		// let currentScene ='';
+		
 		this.state ={
 			id: this.props.match.params.id,
 			sceneNumber: '',
@@ -23,9 +23,8 @@ class UpdateScene extends React.Component {
         })
 	}
 	handleChangeInputSceneNumber = async event => {
-		//const sceneNumber = event.target.value;
 		const re = /^[0-9\b]+$/;
-		//const regex = new Regex(@"^\d$");
+
       	if (event.target.value === '' || re.test(event.target.value)) {
         	this.setState({sceneNumber: event.target.value})
       	}
@@ -44,7 +43,6 @@ class UpdateScene extends React.Component {
 	handleUpdateScene = async() => {
 		const {id, sceneNumber, desc} =this.state;
 		const payload = {sceneNumber, desc};
-		console.log(this.state);
 
 		await api.updateScene(id, payload).then( res => {
 			window.alert("Scene updated successfully");
@@ -53,8 +51,9 @@ class UpdateScene extends React.Component {
 				desc:''
 			});
 
-			window.location.href= '#scenes';
-			window.location.reload();
+			window.location.href= '#scene/'+ this.state.id ;
+			//window.location.reload();
+
 			
 		}).catch(error => {
 			if(error.response.status === 409) {
@@ -70,7 +69,6 @@ class UpdateScene extends React.Component {
 
 	render(){
 		const {sceneNumber, desc, currentScene} =this.state;
-		console.log("update Scene Number : " + sceneNumber);
 
 		return (
 			<React.Fragment>

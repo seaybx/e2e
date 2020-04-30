@@ -2,8 +2,9 @@
 	background: #000;
 	min-height: 100vh;
 	float: left;
-	width: 16%;
+	width: 14%;
 	font-size: 13px;
+	text-align: left;
 }
 .side-bar-links{
 	padding: 5px 15px;

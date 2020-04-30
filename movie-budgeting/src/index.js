@@ -2,22 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/app/App';
-import Sidebar from './components/sidebar/Sidebar';
 import * as serviceWorker from './serviceWorker';
 
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('main-content')
+    <App />,
+  document.getElementById('container')
 );
 
-ReactDOM.render(
-	<Sidebar />,
-	document.getElementById('sidebar')
-);
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

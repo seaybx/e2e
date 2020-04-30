@@ -28,7 +28,7 @@
 .App-link {
   color: #61dafb;
 }
-#content {
+#main-content {
   background: #ccc;
   color: #222;
   height: 75vmin;
@@ -37,11 +37,11 @@
   padding: 10px 0;
 }
 
-#content h1{
+#main-content h1{
   margin: 0;
   font-size: calc(10px + 2vmin);
 }
-#content h2{
+#main-content h2{
   margin: 0;
   font-size: calc(7px + 2vmin);
 }
@@ -111,3 +111,5 @@ input.input-field, .select-field{
 .button-blue:hover {
   box-shadow: 0 10px 12px 0 rgba(0,0,0,0.24), 0 17px 40px 0 rgba(0,0,0,0.19);
 }
+
+#main-content .MuiTableCell-root { font-size: 12px }

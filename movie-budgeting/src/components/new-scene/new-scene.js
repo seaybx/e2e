@@ -51,7 +51,6 @@ class CreateScene extends React.Component {
 				window.alert("Something went wrong");
 				console.log(error);
 			}
-			
 		})
 	}
 
@@ -60,7 +59,7 @@ class CreateScene extends React.Component {
 
 		return (
 			<React.Fragment>
-				<h1>Create New Scene</h1>
+				<h2>Create New Scene</h2>
 				<div className="form-content">
 					<label htmlFor="scene-number"><span>Scene Number </span></label>
 					<input type="text" className="input-field" value={sceneNumber} id="scene-number" onChange = {this.handleChangeInputSceneNumber} />

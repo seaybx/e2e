@@ -12,13 +12,10 @@ code {
     monospace;
 }
 #main-content{
-	width: 84%;
+	width: 86%;
 	float: left;
 }
-#sidebar-menu {
-	width: 20%;
-	float: left;
-}
+
 .padding-left-12 {
   padding-left:12px
 }
