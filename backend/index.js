@@ -24,7 +24,7 @@ module.exports = db;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-const scenesRouter = require('./routes/scene-info-router');
+const scenesRouter = require('./routes/scenes-router');
 const usersRouter = require('./routes/users-router');
 
 app.get('/', (req,res) =>{
