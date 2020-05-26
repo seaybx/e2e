@@ -1,8 +1,12 @@
 const usersModel = require('../models/users');
+const bcrypt = require('bcrypt');
 
-exports.addUser = (req, res) => {
+exports.addUser = async (req, res) => {
+	const hashedPassword = await bcrypt.hash(req.body.password, 10)
 	const body = req.body
+	body.password = hashedPassword
 
+	//console.log(body);
 	if(!body) {
 		return res.status(400).json({
 			success:false,
@@ -18,6 +22,7 @@ exports.addUser = (req, res) => {
 			error:err
 		})
 	}
+	
 
 	usersmodel.save().then( () =>
 	{
@@ -65,12 +70,16 @@ exports.getUserById = async (req, res) => {
 		if(!user) {
 			return res.status(404).json({ success:false, error:"User not found"})
 		}
+		console.log("user :" + user)
 		return res.status(200).json({success:true, data: user})
 	}).catch( err => console.log(err))
 }
 
 exports.updateUser = async (req,res) => {
+	
+	const hashedPassword = await bcrypt.hash(req.body.password, 10)
 	const body = req.body
+
 	if(!body) {
 		return res.status(400).json({
 			success:false,
@@ -86,7 +95,7 @@ exports.updateUser = async (req,res) => {
             })
         }
         user.username = body.username
-        user.password = body.password
+        user.password = hashedPassword
         user.firstName = body.firstName
         user.lastName = body.lastName
         user.role = body.role
@@ -135,3 +144,4 @@ exports.deleteUser = async (req, res) => {
 		})
 	}).catch(err => console.log(err))
 }
+
