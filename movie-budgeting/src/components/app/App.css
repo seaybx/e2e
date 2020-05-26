@@ -67,10 +67,21 @@ label {
   }
 label span {
     width: 170px;
-    font-weight: bold;
     float: left;
+    font-weight: bold;
     padding-top: 20px;
     padding-right: 5px;
+  }
+
+ #login label {
+    display: inline-block;
+    margin: 0px 0px 15px 0px;
+  }
+ #login label span {
+    font-weight: bold;
+    float: none;
+    padding-top: 20px;
+    padding-right: 15px;
   }
 input.input-field, .select-field{
     width: 180px;
@@ -94,6 +105,9 @@ input.input-field, .select-field{
 .button-container {
   padding: 10px 5px 10px 164px;
 }
+#login .button-container {
+  padding: 10px 0;
+}
 
 .button-blue {
   background: #008CBA;
@@ -113,3 +127,17 @@ input.input-field, .select-field{
 }
 
 #main-content .MuiTableCell-root { font-size: 12px }
+#top-user-panel {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: #ccc;
+    width: 275px;
+    text-align: left;
+    padding: 7px 5px;
+    font-size: 12px;
+  }
+  #top-user-panel a {
+    text-decoration:none;
+    color:blue;
+  }
