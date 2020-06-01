@@ -52,9 +52,10 @@ export const login = payload => api.post('/login', payload)
 
 export const addProject = payload => api.post('/createproject', payload)
 export const deleteProject = id => api.delete(`/deleteproject/${id}`)
-export const listProjects = () => api.get('/projects')
+export const listProjects = (userid) => api.get('/projects', {params: {userid} } )
 export const getProjectInfo = id => api.get(`project/${id}`)
 export const updateProject = (id, payload) => api.put(`project/${id}`, payload)
+export const setDefaultProject = id => api.put(`/project/defaultproject/${id}`)
 
 const apis ={
 	createScene,
@@ -73,7 +74,8 @@ const apis ={
 	listProjects,
 	deleteProject,
 	getProjectInfo,
-	updateProject
+	updateProject,
+	setDefaultProject
 }
 
 export default apis;
