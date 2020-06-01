@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 const scenesModel = new Schema(
     {
         sceneNumber: { type: String, required: true, index: {unique: true, dropDups: true} },
-        desc: { type: String, required: true }
+        desc: { type: String, required: true },
+        projectId: {type:String, required:true}
     },
     { timestamps: true },
 )

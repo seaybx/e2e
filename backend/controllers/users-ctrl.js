@@ -71,7 +71,16 @@ exports.getUserById = async (req, res) => {
 			return res.status(404).json({ success:false, error:"User not found"})
 		}
 		console.log("user :" + user)
-		return res.status(200).json({success:true, data: user})
+		let userData = {
+			id:user._id, 
+			username: user.username, 
+			firstName:user.firstName, 
+			lastName: user.lastName,
+			role: user.role,
+			createdAt: user.createdAt,
+			updatedAt: user.updatedAt
+			}
+		return res.status(200).json({success:true, data: userData})
 	}).catch( err => console.log(err))
 }
 

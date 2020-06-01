@@ -7,6 +7,8 @@ exports.addProject = async (req, res) => {
 	    project.projectName = body.projectname
         project.projectDesc = body.desc
         project.userid = body.user
+        project.defaultProject = false
+        project.status = 'active'
 
 	if(!project) {
 		return res.status(400).json({
@@ -41,7 +43,9 @@ exports.addProject = async (req, res) => {
 }
 
 exports.listProjects = async (req,res) => {
-	await projectsModel.find({}, (err, projects) => {
+	await projectsModel.find({userid: req.query.userid}, (err, projects) => {
+		console.log(req.query.userid);
+		console.log("projects", projects);
 		if(err){
 			return res.status(400).json({
 				success:false,
@@ -98,6 +102,7 @@ exports.updateProject = async (req,res) => {
         project.projectDesc = body.desc
         project.userid = body.user
 
+
         project.save().then(
         	() => {
         		return res.status(200).json({
@@ -144,3 +149,25 @@ exports.deleteProject = async (req, res) => {
 	}).catch(err => console.log(err))
 }
 
+exports.setAsDefaultProject = async (req, res) => {
+	console.log("Id", req.params.id)
+
+	await projectsModel.findOneAndUpdate({ _id: req.params.id},{defaultProject: true}, (err, project) => {
+		if(err){
+				return res.status(400).json({
+					success:false,
+					error: err
+				})
+			}
+			if(!project){
+				return res.status(404).json({
+					success:false,
+					error:err
+				})
+			}
+			return res.status(200).json({
+				success:true,
+				data: project
+			})
+		}).catch(err => console.log(err))
+}

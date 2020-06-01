@@ -5,7 +5,9 @@ const projectsModel = new Schema (
 	{
 		projectName: {type:String, required:true},
 		projectDesc: {type:String},
-		userid: {type:String, required:true}
+		userid: {type:String, required:true},
+		status: {type:String},
+		defaultProject: {type:Boolean}
 
 	},
 	{ timestamps: true }
