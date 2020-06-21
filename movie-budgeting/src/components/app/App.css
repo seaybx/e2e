@@ -24,6 +24,17 @@
   color: white;
   padding: 5px 5px 5px 20px;
 }
+.App-header h1{
+  padding: 5px;
+  margin: 0;
+
+}
+.App-header h2{
+  padding: 5px;
+  margin:0;
+  font-size: 15px;
+  color: #ccc
+}
 
 .App-link {
   color: #61dafb;
@@ -111,6 +122,19 @@ input.input-field, .select-field{
 
 .button-blue {
   background: #008CBA;
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin:7px 5px 5px 0;
+  box-shadow: 0 5px 7px 0 rgba(0,0,0,0.2), 0 5px 15px 0 rgba(0,0,0,0.19);
+}
+
+.button-grey {
+  background: #999;
   border: none;
   color: white;
   padding: 7px 10px;

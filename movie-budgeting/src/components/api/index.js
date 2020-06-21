@@ -37,7 +37,7 @@ api.interceptors.response.use(undefined, err => {
     
 
 export const createScene = payload => api.post('/create',payload)
-export const getAllScenes = () => api.get('/scenes')
+export const getAllScenes = (projectId) => api.get('/scenes', {params: {projectId}} )
 export const getSceneById = id => api.get(`/scene/${id}`)
 export const deleteScene = id => api.delete(`/deletescene/${id}`)
 export const updateScene = (id, payload) => api.put(`/scene/${id}`, payload)

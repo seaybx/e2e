@@ -8,7 +8,7 @@ class CreateScene extends React.Component {
 
 		this.state ={
 			sceneNumber: '',
-			desc:''
+			desc:'',
 		}
 	}
 
@@ -32,14 +32,16 @@ class CreateScene extends React.Component {
 	}
 	
 	handleAddScene = async() =>{
+		let projectId = localStorage.getItem('defaultProjectId')
+		
 		const {sceneNumber, desc} =this.state;
-		const payload = {sceneNumber, desc};
+		const payload = {sceneNumber, desc, projectId};
 
 		await api.createScene(payload).then(res =>{
 			window.alert("Scene added successfully");
 			this.setState({
 				sceneNumber: '',
-				desc:''
+				desc:'',
 			});
 			window.location.reload();
 			

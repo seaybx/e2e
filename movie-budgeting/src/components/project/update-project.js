@@ -9,14 +9,14 @@ class UpdateProject extends React.Component {
 			projectname: '',
 			desc:'',
 			user:'',
-			defaultProject: false
+			defaultProject: false,
 		}
 	}
 
 	componentDidMount = async() => {
 		const { id } = this.state
+		// pending - Write failure case also...
 		const projectInfo = await api.getProjectInfo(id)
-		console.log("projectInfo", projectInfo)
 
 		this.setState({
 			projectname: projectInfo.data.data.projectName,
@@ -37,7 +37,7 @@ class UpdateProject extends React.Component {
 	}
 
 	handleCancel =() => {
-		window.location.href ="projects/#/projects";
+		window.location.href ="/projects/#/projects";
 	}
 
 	handleUpdateProject = async() => {
@@ -55,7 +55,7 @@ class UpdateProject extends React.Component {
 				desc:'',
 				user:''
 			})
-			window.location.href ="projects/#/projects"
+			window.location.href ="/projects/#/projects"
 		})
 		.catch(error => {
 			if(error.response.status === 409) {
@@ -69,19 +69,25 @@ class UpdateProject extends React.Component {
 
 	}
 
-
 	handleSetAsDefault = (event) => {
 		event.preventDefault();
-		const { id } = this.state
-		api.setDefaultProject(id);
-		//window.location.href ="projects/#/projects"
-		window.location.reload();
+		const { id, projectname } = this.state
+		api.setDefaultProject(id).then (res => {
+			window.alert("Project set as default project")
+			localStorage.setItem('defaultProjectId', this.state.id)
+			localStorage.setItem('defaultProjectName', this.state.projectname)
 
+		})
+		.catch(error => {
+
+				window.alert("Something went wrong");
+				console.log(error.response);
+		})
+		window.location.href ="/projects/#/projects"
 	}
 
 	render() {
 		const {projectname, desc, user, defaultProject} =this.state;
-
 		console.log(this.state);
 
 		return(
@@ -96,7 +102,7 @@ class UpdateProject extends React.Component {
 					<br />
 					<div className="button-container">
 						<button onClick = {this.handleUpdateProject} className="button-blue">Update Project </button>
-						<button onClick = {this.handleSetAsDefault} className={`button-blue ${defaultProject ? "disabled" : ""}`}
+						<button onClick = {this.handleSetAsDefault} className={`${defaultProject ? "button-grey" : "button-blue"}`}
 						disabled= {defaultProject}>Set as Default Project </button>
 						<button onClick={this.handleCancel} className="button-blue">Cancel</button>
 					</div>

@@ -14,6 +14,7 @@ import Login from '../login/login.js'
 import Dashboard from '../dashboard/dashboard.js'
 import ListProjects from '../project/list-projects.js'
 import UpdateProject from '../project/update-project.js'
+import CurrentProjectInfo from '../dashboard/current-project-info'
 import api from '../api';
 
 
@@ -51,8 +52,7 @@ export default class App extends React.Component {
   constructor(props){
       super(props);
       this.state = {
-        isLoggedIn : false,
-        user: {}
+        isLoggedIn : false
       }
     }
 
@@ -67,14 +67,14 @@ export default class App extends React.Component {
 
       return (
 
-      <div className="App">
-        <header className="App-header">
-          <h1>Budgeting- Scene by Scene </h1>
-        </header>
         <HashRouter>
       {isLoggedIn 
         ?
-          <React.Fragment>
+        <div className="App">
+          <header className="App-header">
+            <h1>Budgeting- Scene by Scene </h1>
+            <CurrentProjectInfo />
+          </header>
             <div id="main-content"> 
                 <PrivateRoute  path="/project/create-project" component={CreateProject} />
                 <PrivateRoute  path="/new-scene" exact component={CreateScene} />
@@ -91,15 +91,20 @@ export default class App extends React.Component {
 
               </div>
             <div id="sidebar"> <Sidebar /> </div>
-          </React.Fragment> 
+        </div>
         :
+        <div className="App">
+          <header className="App-header">
+            <h1>Budgeting- Scene by Scene </h1>
+          </header>
           <div id="public-content">
             <PublicRoute restricted={true} exact path="/login" component={Login} />
             <UserPanel />
           </div>
-         }
-        </HashRouter>     
-      </div>
+        </div>
+         }   
+
+    </HashRouter>
       )
     }
   }

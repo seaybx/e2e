@@ -14,13 +14,18 @@ class SceneList extends React.Component {
 		}
 	}
 	componentDidMount = async () => {
-		await api.getAllScenes().then(scenes => {
+        let projectId = localStorage.getItem('defaultProjectId')
+		await api.getAllScenes(projectId).then(scenes => {
 
 			this.setState({
 				scenes: scenes.data.data
 			})
             this.sortScenes();
 		})
+        .catch(error => {
+            console.log(error.response);
+        })
+
 	}
 
     sortScenes = () => {
@@ -45,25 +50,38 @@ class SceneList extends React.Component {
     render (){
 
     	const {scenes} =this.state;
-    	//const sceneListContent = scenes.map (scene => {scene.sceneNumber});
-    	//Create data for Metis Menu from the json received
-    	let metisMenuArray = scenes.map(function(scene) {
-    		return {
-    			"id": scene._id, 
-    			"icon": "icon-class-name", 
-    			"label" : "Scene " + scene.sceneNumber, 
-    			"to": "#scene/" + scene._id 
-    		};
-    	})
+        let metisMenuArray 
+        console.log("scenes.length", scenes.length)
+
+        if(scenes.length > 0){
+    	
+        	//Create data for Metis Menu from the json received
+        	metisMenuArray = scenes.map(function(scene) {
+        		return {
+        			"id": scene._id, 
+        			"icon": "icon-class-name", 
+        			"label" : "Scene " + scene.sceneNumber, 
+        			"to": "#scene/" + scene._id 
+        		};
+        	})
+
+    }
     	    	    	
         return (
-            <React.Fragment>
-                <div className="relative">
-                    <p>Scenes </p>
-                    <button onClick={this.sortScenes} className ="sort"> <i className="fa fa-sort" aria-hidden="true"></i> </button>
+            <div>
+            {scenes.length > 0 ?
+                <div>
+                    <div className="relative">
+                        <p>Scenes </p>
+                        <button onClick={this.sortScenes} className ="sort"> <i className="fa fa-sort" aria-hidden="true"></i> </button>
+                    </div>
+
+                    <MetisMenu content={metisMenuArray} activeLinkFromLocation />
                 </div>
-                <MetisMenu content={metisMenuArray} activeLinkFromLocation />
-             </React.Fragment>          
+
+                : ''
+                } 
+            </div>  
         );
     }
 }
