@@ -7,9 +7,7 @@ const usersModel = new Schema (
 		password: {type:String, required:true},
 		firstName: {type:String, required:true},
 		lastName: {type:String},
-		role: {type:String, required:true},
-		createdDate: {type:String},
-		lastLoginDate: {type:String}
+		role: {type:String, required:true}
 	},
 	{ timestamps: true }
 )

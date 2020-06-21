@@ -45,7 +45,6 @@ exports.addProject = async (req, res) => {
 exports.listProjects = async (req,res) => {
 	await projectsModel.find({userid: req.query.userid}, (err, projects) => {
 		console.log(req.query.userid);
-		console.log("projects", projects);
 		if(err){
 			return res.status(400).json({
 				success:false,
@@ -150,24 +149,24 @@ exports.deleteProject = async (req, res) => {
 }
 
 exports.setAsDefaultProject = async (req, res) => {
-	console.log("Id", req.params.id)
-
-	await projectsModel.findOneAndUpdate({ _id: req.params.id},{defaultProject: true}, (err, project) => {
+	// Find the current default project and set the defaultProject status to false
+	await projectsModel.findOneAndUpdate({defaultProject: true}, {defaultProject: false}, (err, currentDefaultProject) => {
 		if(err){
+			console.log(err)
 				return res.status(400).json({
 					success:false,
 					error: err
 				})
 			}
-			if(!project){
-				return res.status(404).json({
-					success:false,
-					error:err
-				})
-			}
-			return res.status(200).json({
+
+			// Update the project to set the project as defaultProject
+			// May need to rewrite the  whole method as two DB updates are being executed.
+			projectsModel.findOneAndUpdate({ _id: req.params.id},{defaultProject: true}, (err, project) => {
+				return res.status(200).json({
 				success:true,
 				data: project
-			})
-		}).catch(err => console.log(err))
-}
+				})
+			}).catch(err => console.log(err))
+
+		})
+	}

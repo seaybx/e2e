@@ -44,6 +44,23 @@ exports.createScene  = function(req, res) {
 
 exports.listAllScenes = async (req, res) => {
 
+    await scenesModel.find({projectId: req.query.projectId}, (err, scenes) => {
+        if (err) {
+            return res.status(400).json({ success: false, error: err })
+        }
+        if (!scenes.length) {
+            return res
+                .status(404)
+                .json({ success: false, error: `No Scenes found` })
+        }
+        return res.status(200).json({ success: true, data: scenes })
+    }).catch(err => console.log(err))
+}
+
+
+
+exports.listAllUsersScenes = async (req, res) => {
+
     await scenesModel.find({}, (err, scenes) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
